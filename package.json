@@ -1,0 +1,26 @@
+{
+  "name": "Weather Application",
+  "version": "1.0.0",
+  "description": "Html Webiste",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.0.0",
+    "node": "^10.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-postcss": "^0.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anil Maharjan",
+  "license": "ISC"
+}

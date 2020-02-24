@@ -1,0 +1,118 @@
+/* Banner Css */
+.weather-card{
+	$parent:&;
+		height:80vh;
+		display: flex;
+		flex-direction: column;
+		@include respond-above(sm) {
+			height:90vh;
+
+		}
+		@include respond-above(md) {
+			height:85vh;
+
+		}
+	
+	&-container{
+		margin: auto;
+		width: 80%;
+
+		@include respond-above(sm) {
+			width: 40%;
+		}
+		@include respond-above(md) {
+			width: 20%;
+		}
+	}
+	&-detail{
+
+	}
+	&-icon{
+		font-size: 40px;
+	}
+	&-info{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 20px;
+	}
+	&-info-text{
+		font-size:42px;
+		font-weight:$font-weight-semi-bold;
+		padding-left: 10px;
+	}
+	&-location{
+		font-weight: $font-weight-semi-bold;
+		line-height: 1;
+		margin: 0;
+		font-size: $base-font-size + 4;
+	}
+	&-location-icon{
+		margin-right: 8px;
+		font-size: 20px;
+	}
+	&-date{
+		color:$default-color;
+	}
+	&-day{
+		font-weight: $font-weight-semi-bold;
+		font-size: $base-font-size + 2;
+		margin: 0;
+		@include respond-above(md){
+			font-size: $base-font-size + 4;
+
+		}
+	}
+
+	&-slider{
+		.card{
+			border:medium none;
+			&-body{
+				transition: all 0.5s ease-in-out 0s;
+				span{
+					display: block;
+					color:$black-color;
+				}
+				#{$parent}-icon{
+					margin-top: 15px;
+					margin-bottom: 15px;
+					font-size: 20px;
+				}
+				#{$parent}-info-text{
+					font-size: 32px;
+					padding-left: 0;
+				}
+
+				.btnToggle {
+				
+					margin: 0 auto -10px;
+					text-align: center;
+					opacity: 0;
+					width: 20px;
+					display: block;
+
+				}
+
+				&.active,
+				&:hover,
+				&:focus{
+					background: $base-brand-color;
+					*{
+						color:$default-color;
+					}
+					.btnToggle {
+						opacity: 1;
+					}
+
+				}
+
+			}
+		}
+	}
+}
+.toggleDiv {
+	padding: 40px 0;
+	display: none;
+	background:lighten($black-color, 81.57);
+}

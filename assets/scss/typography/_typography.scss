@@ -1,0 +1,12 @@
+
+/*-------------------
+	Typography
+--------------------*/
+$heading-base-font-size:$base-font-size + 2;
+$heading-scale: 4;
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: $heading-base-font-size + $heading-scale * (6 - $i);
+  }
+}

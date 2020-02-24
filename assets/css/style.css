@@ -1,0 +1,404 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #191818;
+  font-size: 14px;
+}
+
+p {
+  color: #191818;
+}
+
+a {
+  color: #ff6600;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #ff6600;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*------------------
+	Global Styles
+------------------*/
+.bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-overlay {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+.bg-overlay::before {
+  position: absolute;
+  content: '';
+  background-color: rgba(37, 37, 37, 0.4);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/*------------------------
+	Slick Slider Reset
+------------------------*/
+.slick-prev {
+  left: 50px;
+}
+.slick-next {
+  right: 50px;
+}
+.slick-prev, .slick-next {
+  width: 40px;
+  height: 40px;
+  background: #191818;
+  color: #ffffff;
+  z-index: 1;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+.slick-prev:before, .slick-next:before {
+  display: none;
+}
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+  background: #141313;
+  color: #ffffff;
+}
+
+/*-------------------
+	Typography
+--------------------*/
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+/* Banner Css */
+.weather-card {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 768px) {
+  .weather-card {
+    height: 90vh;
+  }
+}
+@media (min-width: 992px) {
+  .weather-card {
+    height: 85vh;
+  }
+}
+.weather-card-container {
+  margin: auto;
+  width: 80%;
+}
+@media (min-width: 768px) {
+  .weather-card-container {
+    width: 40%;
+  }
+}
+@media (min-width: 992px) {
+  .weather-card-container {
+    width: 20%;
+  }
+}
+.weather-card-icon {
+  font-size: 40px;
+}
+.weather-card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 20px;
+}
+.weather-card-info-text {
+  font-size: 42px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+.weather-card-location {
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  font-size: 18px;
+}
+.weather-card-location-icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+.weather-card-date {
+  color: #ffffff;
+}
+.weather-card-day {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .weather-card-day {
+    font-size: 18px;
+  }
+}
+.weather-card-slider .card {
+  border: medium none;
+}
+.weather-card-slider .card-body {
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+.weather-card-slider .card-body span {
+  display: block;
+  color: #252525;
+}
+.weather-card-slider .card-body .weather-card-icon {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.weather-card-slider .card-body .weather-card-info-text {
+  font-size: 32px;
+  padding-left: 0;
+}
+.weather-card-slider .card-body .btnToggle {
+  margin: 0 auto -10px;
+  text-align: center;
+  opacity: 0;
+  width: 20px;
+  display: block;
+}
+.weather-card-slider .card-body.active, .weather-card-slider .card-body:hover, .weather-card-slider .card-body:focus {
+  background: #ff6600;
+}
+.weather-card-slider .card-body.active *, .weather-card-slider .card-body:hover *, .weather-card-slider .card-body:focus * {
+  color: #ffffff;
+}
+.weather-card-slider .card-body.active .btnToggle, .weather-card-slider .card-body:hover .btnToggle, .weather-card-slider .card-body:focus .btnToggle {
+  opacity: 1;
+}
+
+.toggleDiv {
+  padding: 40px 0;
+  display: none;
+  background: whitesmoke;
+}
+
+.toggle-button {
+  position: absolute;
+  right: 110px;
+  top: 30px;
+}
+@media (min-width: 768px) {
+  .toggle-button {
+    top: 10%;
+    right: 20%;
+  }
+}
+.toggle-button *,
+.toggle-button *:before,
+.toggle-button *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.toggle-button input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.toggle-button input[type="checkbox"][disabled] ~ label {
+  pointer-events: none;
+}
+.toggle-button input[type="checkbox"][disabled] ~ label .toggle-button__switch {
+  opacity: 0.4;
+}
+.toggle-button input[type="checkbox"]:checked ~ label .toggle-button__switch:before {
+  content: attr(data-unchecked);
+  left: 0;
+}
+.toggle-button input[type="checkbox"]:checked ~ label .toggle-button__switch:after {
+  content: attr(data-checked);
+}
+.toggle-button label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.toggle-button label .toggle-button__label-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 32px;
+}
+.toggle-button label .toggle-button__switch {
+  position: relative;
+  cursor: pointer;
+}
+.toggle-button label .toggle-button__switch:before {
+  content: attr(data-checked);
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.toggle-button label .toggle-button__switch:after {
+  content: attr(data-unchecked);
+  position: absolute;
+  z-index: 5;
+  text-transform: uppercase;
+  text-align: center;
+  background: white;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.toggle-button input[type="checkbox"][disabled] ~ label {
+  color: rgba(255, 255, 255, 0.5);
+}
+.toggle-button input[type="checkbox"]:checked ~ label:hover {
+  color: #ffffff;
+}
+.toggle-button input[type="checkbox"]:checked ~ label .toggle-button__switch:after {
+  color: #ffffff;
+}
+.toggle-button label .toggle-button__label-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.toggle-button label .toggle-button__switch {
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+  -o-transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+  transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+  background: white;
+}
+.toggle-button label .toggle-button__switch:before {
+  color: #f1f1f1;
+}
+.toggle-button label .toggle-button__switch:after {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+  -o-transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+  transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+  transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1), -webkit-transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+  color: #ffffff;
+  background: #ff6600;
+}
+.toggle-button input[type="checkbox"]:checked ~ label .toggle-button__switch:after {
+  -webkit-transform: translate3d(40.5px, 0, 0);
+          transform: translate3d(40.5px, 0, 0);
+}
+.toggle-button label {
+  font-size: 14px;
+}
+.toggle-button label .toggle-button__switch {
+  height: 40px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 85px;
+          flex: 0 0 85px;
+  border-radius: 4px;
+}
+.toggle-button label .toggle-button__switch:before {
+  left: 42.5px;
+  font-size: 14px;
+  line-height: 40px;
+  width: 42.5px;
+  padding: 0 12px;
+}
+.toggle-button label .toggle-button__switch:after {
+  top: 2px;
+  left: 2px;
+  border-radius: 2px;
+  width: 40.5px;
+  line-height: 36px;
+  font-size: 14px;
+}
+.toggle-button--round label .toggle-button__switch {
+  border-radius: 50px;
+}
+.toggle-button--round label .toggle-button__switch:after {
+  border-radius: 50px;
+}
+.toggle-button--round input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.toggle-button--round input[type="checkbox"][disabled] ~ label {
+  pointer-events: none;
+}
+.toggle-button--round input[type="checkbox"][disabled] ~ label .toggle-button__switch {
+  opacity: 0.4;
+}
+.toggle-button--round input[type="checkbox"]:checked ~ label .toggle-button__switch:before {
+  content: attr(data-unchecked);
+  left: 0;
+  border-radius: 50px;
+}
+.toggle-button--round input[type="checkbox"]:checked ~ label .toggle-button__switch:after {
+  content: attr(data-checked);
+  border-radius: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */
